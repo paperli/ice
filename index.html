@@ -11,7 +11,7 @@
   <script>
     $('#generate-btn').click(function() {
       $.ajax({
-        url: 'https://localhost:3000/ask',
+        url: 'https://ice-server-production.up.railway.app/ask',
         type: 'POST',
         success: function(data) {
           $('#question').text(data.answer);
