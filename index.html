@@ -15,7 +15,7 @@
         url: $('#url').val(),
         type: 'POST',
         success: function(data) {
-          $('#question').text(data.answer);
+          $('#question').text(data.answer.message.content);
         },
         error: function() {
           $('#question').text('Error generating question');
