@@ -6,7 +6,7 @@
 </head>
 <body>
   <button id="generate-btn">Generate Ice-Breaker Question</button>
-  <input type="text" id="url" name="url" value="https://ice-server-production.up.railway.app/ask?callback=answer"><br />
+  <input type="text" id="url" name="url" value="https://ice-server-production.up.railway.app/ask"><br />
   <p id="question"></p>
 
   <script>
@@ -14,7 +14,6 @@
       $.ajax({
         url: $('#url').val(),
         type: 'POST',
-        dataType: 'jsonp',
         success: function(data) {
           $('#question').text(data.answer);
         },
