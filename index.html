@@ -13,6 +13,7 @@
       $.ajax({
         url: 'https://ice-server-production.up.railway.app/ask',
         type: 'POST',
+        dataType: 'jsonp',
         success: function(data) {
           $('#question').text(data.answer);
         },
